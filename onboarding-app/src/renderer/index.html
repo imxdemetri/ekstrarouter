@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekstra Router Setup</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo">
+        <h1>Ekstra Router Setup</h1>
+        <p class="subtitle">Smart router firmware for vending machines</p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="app-main">
+      <!-- Step 1: Detection -->
+      <div id="step-detect" class="step active">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <h2>Detecting Router</h2>
+        </div>
+        <div class="step-content">
+          <div class="detection-status">
+            <div class="spinner"></div>
+            <p id="detect-message">Scanning network for GL.iNet router...</p>
+          </div>
+          <div id="detect-result" class="detect-result hidden">
+            <div class="success-message">
+              <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <div>
+                <p class="result-title">Router Found!</p>
+                <p class="result-details" id="router-details"></p>
+              </div>
+            </div>
+            <div id="firmware-status" class="firmware-status"></div>
+            <button id="btn-flash" class="btn btn-primary hidden">Install Ekstra Firmware</button>
+            <button id="btn-open-dashboard" class="btn btn-secondary hidden">Open Dashboard</button>
+          </div>
+          <div id="detect-error" class="error-message hidden">
+            <svg class="icon-error" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <p id="error-message"></p>
+            <button id="btn-retry-detect" class="btn btn-secondary">Try Again</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Flashing -->
+      <div id="step-flash" class="step">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <h2>Installing Firmware</h2>
+        </div>
+        <div class="step-content">
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+            </div>
+            <p id="progress-message" class="progress-message">Preparing firmware upload...</p>
+          </div>
+          <div class="warning-box">
+            <svg class="icon-warning" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+            </svg>
+            <p><strong>Important:</strong> Do not unplug the router during installation. This process takes 2-3 minutes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Rebooting -->
+      <div id="step-reboot" class="step">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <h2>Router Rebooting</h2>
+        </div>
+        <div class="step-content">
+          <div class="reboot-status">
+            <div class="spinner large"></div>
+            <p id="reboot-message">Router is rebooting. Please wait 2-3 minutes...</p>
+            <p class="reboot-note">The router lights will flash during this process.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: Complete -->
+      <div id="step-complete" class="step">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <h2>Setup Complete!</h2>
+        </div>
+        <div class="step-content">
+          <div class="success-screen">
+            <svg class="icon-success-large" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h3>Ekstra Firmware Installed Successfully</h3>
+            <p class="complete-message">Your router is now ready for setup. Click below to open the dashboard and complete the configuration.</p>
+            <div class="action-buttons">
+              <button id="btn-complete-dashboard" class="btn btn-primary">Open Dashboard</button>
+              <button id="btn-complete-close" class="btn btn-secondary">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>Ekstra AI © 2026 | <a href="#" id="link-help">Help</a></p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

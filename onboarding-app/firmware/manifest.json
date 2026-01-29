@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "firmware": {
+    "gl-b3000": {
+      "file": "ekstra-firmware-gl-b3000.bin",
+      "sha256": "placeholder-sha256-hash",
+      "size": 0
+    },
+    "gl-mt3000": {
+      "file": "ekstra-firmware-gl-mt3000.bin",
+      "sha256": "placeholder-sha256-hash",
+      "size": 0
+    },
+    "gl-x3000": {
+      "file": "ekstra-firmware-gl-x3000.bin",
+      "sha256": "placeholder-sha256-hash",
+      "size": 0
+    },
+    "gl-xe3000": {
+      "file": "ekstra-firmware-gl-xe3000.bin",
+      "sha256": "placeholder-sha256-hash",
+      "size": 0
+    }
+  },
+  "notes": "Firmware binaries (.bin files) are not committed to git. They should be downloaded during build or from CDN. SHA256 hashes will be updated when firmware is available."
+}
