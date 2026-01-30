@@ -86,6 +86,7 @@ ekstra-router/
 ## Documentation
 
 - **[Project Dashboard](DASHBOARD.md)** - Current status, MVP progress, next steps
+- [Git Workflow](docs/GIT_WORKFLOW.md) - Auto-push on commit so the team can review
 - [Architecture Overview](docs/ARCHITECTURE.md) - System architecture and component details
 - [Strategic Alignment](docs/STRATEGIC_ALIGNMENT.md) - Problem → Solution mapping
 - [User Journey](docs/USER_JOURNEY.md) - 8-step customer setup flow

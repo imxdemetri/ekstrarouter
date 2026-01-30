@@ -1,0 +1,4 @@
+#!/bin/sh
+# Auto-push after every commit so the team can review changes.
+# Requires one-time setup: git config core.hooksPath scripts/git-hooks
+exec git push
